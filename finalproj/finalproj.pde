@@ -36,11 +36,11 @@ void draw() {
 }
 
 void keyPressed() {
-  A = int(map(mouseY, height, 0, 0, 127));
-  B = int(map(mouseX, 0, width, 0, 127));
+  A = int(map(mouseY, height, 0, 0, 125));
+  B = int(map(mouseX, 0, width, 0, 125));
   myBus.sendNoteOn(channel, A, B);
   
-  tiles.add(new Tile(mouseX, mouseY, B + 10));
+  tiles.add(new Tile(mouseX, mouseY, B + 20));
 }
 
 
@@ -49,7 +49,7 @@ void mousePressed(){
    A = int(map(mouseY, height, 0, 0, 120));
   B = int(map(mouseX, 0, width, 0, 120));
  file.play();
-  tiles.add(new Tile(mouseX, mouseY, B + 10));
+  tiles.add(new Tile(mouseX, mouseY, B + 20));
   
 }
   
